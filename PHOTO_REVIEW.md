@@ -4,16 +4,16 @@
 
 | 檔名 | 狀態 | 原始來源／授權 |
 |---|---|---|
-| vienna-stephansdom | 找不到可用照片，保留原插畫 | — |
-| vienna-am-hof-christmas | 找不到可用照片，保留原插畫 | — |
-| vienna-freyung-christmas | 找不到可用照片，保留原插畫 | — |
-| vienna-stephansplatz-christmas | 找不到可用照片，保留原插畫 | — |
-| vienna-karlskirche | 找不到可用照片，保留原插畫 | — |
-| vienna-rathausplatz-christmas | 找不到可用照片，保留原插畫 | — |
-| helsinki-senate-square | 找不到可用照片，保留原插畫 | — |
-| helsinki-uspenski-cathedral | 找不到可用照片，保留原插畫 | — |
-| helsinki-cathedral | 找不到可用照片，保留原插畫 | — |
-| helsinki-old-market-hall | 找不到可用照片，保留原插畫 | — |
+| vienna-stephansdom | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:Stephansdom_Barbarakapelle_Gew%C3%B6lbe_01.JPG)／CC BY-SA 4.0／Uoaei1 |
+| vienna-am-hof-christmas | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:Karl_Wenzel_Zajicek_A_Christmas_market_in_Am_Hof_Vienna_1908.jpg)／Public domain／Carl Wenzel Zajicek |
+| vienna-freyung-christmas | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:Christmas_market_-_panoramio.jpg)／CC BY 3.0／fabiolah |
+| vienna-stephansplatz-christmas | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:Christmas_Market_Outside_St_Stephen%27s_Cathedral,_Vienna.jpg)／CC BY 4.0／CoyotesKenning |
+| vienna-karlskirche | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:20250502_Karlskirche_Vienna.jpg)／CC BY-SA 4.0／Flocci Nivis |
+| vienna-rathausplatz-christmas | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:Christmas_Market_Vienna_(375795453).jpg)／CC BY 2.0／Tony Hisgett from Birmingham, UK |
+| helsinki-senate-square | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:Helsinki_Senate_Square_20170130.jpg)／CC BY-SA 4.0／Tyg728 |
+| helsinki-uspenski-cathedral | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:0212_Helsinki_Finnair_sky_wheel_and_Uspenski_cathedral.jpg)／CC BY-SA 4.0／Virtual-Pano |
+| helsinki-cathedral | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:0140_FIN_Helsinki_Main_Lutheran_Cathedral_organ_V-P.jpg)／CC BY-SA 4.0／Virtual-Pano |
+| helsinki-old-market-hall | 下載成功／仍需人工確認是否對應景點 | [來源](https://commons.wikimedia.org/wiki/File:Old_market_hall_in_Helsinki_in_Kaartinkaupunki,_Helsinki,_Finland,_2024_June.jpg)／CC BY 2.0／Scott Edmunds |
 | rovaniemi-santa-claus-village | 查詢失敗，保留原插畫 | — |
 | levi-christmas-market | 查詢失敗，保留原插畫 | — |
 | levi-zero-point | 查詢失敗，保留原插畫 | — |
@@ -33,4 +33,4 @@
 | bergen-christmas-market | 查詢失敗，保留原插畫 | — |
 | vienna-schonbrunn-christmas | 查詢失敗，保留原插畫 | — |
 
-此次自動下載結果：0/28 張。
+此次自動下載結果：10/28 張。

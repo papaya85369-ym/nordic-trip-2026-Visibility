@@ -2,52 +2,112 @@
   {
     "slug": "vienna-stephansdom",
     "query": "Stephansdom Vienna cathedral",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/vienna-stephansdom.webp",
+    "photo_title": "File:Stephansdom Barbarakapelle Gewölbe 01.JPG",
+    "author": "Uoaei1",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Stephansdom_Barbarakapelle_Gew%C3%B6lbe_01.JPG"
   },
   {
     "slug": "vienna-am-hof-christmas",
     "query": "Am Hof Christmas market Vienna",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/vienna-am-hof-christmas.webp",
+    "photo_title": "File:Karl Wenzel Zajicek A Christmas market in Am Hof Vienna 1908.jpg",
+    "author": "Carl Wenzel Zajicek",
+    "license": "Public domain",
+    "license_url": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Karl_Wenzel_Zajicek_A_Christmas_market_in_Am_Hof_Vienna_1908.jpg"
   },
   {
     "slug": "vienna-freyung-christmas",
     "query": "Freyung Christmas market Vienna",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/vienna-freyung-christmas.webp",
+    "photo_title": "File:Christmas market - panoramio.jpg",
+    "author": "fabiolah",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Christmas_market_-_panoramio.jpg"
   },
   {
     "slug": "vienna-stephansplatz-christmas",
     "query": "Stephansplatz Christmas market Vienna",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/vienna-stephansplatz-christmas.webp",
+    "photo_title": "File:Christmas Market Outside St Stephen's Cathedral, Vienna.jpg",
+    "author": "CoyotesKenning",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Christmas_Market_Outside_St_Stephen%27s_Cathedral,_Vienna.jpg"
   },
   {
     "slug": "vienna-karlskirche",
     "query": "Karlskirche Vienna church",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/vienna-karlskirche.webp",
+    "photo_title": "File:20250502 Karlskirche Vienna.jpg",
+    "author": "Flocci Nivis",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20250502_Karlskirche_Vienna.jpg"
   },
   {
     "slug": "vienna-rathausplatz-christmas",
     "query": "Rathausplatz Christmas market Vienna",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/vienna-rathausplatz-christmas.webp",
+    "photo_title": "File:Christmas Market Vienna (375795453).jpg",
+    "author": "Tony Hisgett from Birmingham, UK",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Christmas_Market_Vienna_(375795453).jpg"
   },
   {
     "slug": "helsinki-senate-square",
     "query": "Senate Square Helsinki",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/helsinki-senate-square.webp",
+    "photo_title": "File:Helsinki Senate Square 20170130.jpg",
+    "author": "Tyg728",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Helsinki_Senate_Square_20170130.jpg"
   },
   {
     "slug": "helsinki-uspenski-cathedral",
     "query": "Uspenski Cathedral Helsinki",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/helsinki-uspenski-cathedral.webp",
+    "photo_title": "File:0212 Helsinki Finnair sky wheel and Uspenski cathedral.jpg",
+    "author": "Virtual-Pano",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:0212_Helsinki_Finnair_sky_wheel_and_Uspenski_cathedral.jpg"
   },
   {
     "slug": "helsinki-cathedral",
     "query": "Helsinki Cathedral",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/helsinki-cathedral.webp",
+    "photo_title": "File:0140 FIN Helsinki Main Lutheran Cathedral organ V-P.jpg",
+    "author": "Virtual-Pano",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:0140_FIN_Helsinki_Main_Lutheran_Cathedral_organ_V-P.jpg"
   },
   {
     "slug": "helsinki-old-market-hall",
     "query": "Old Market Hall Helsinki",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "下載成功／仍需人工確認是否對應景點",
+    "file": "images/helsinki-old-market-hall.webp",
+    "photo_title": "File:Old market hall in Helsinki in Kaartinkaupunki, Helsinki, Finland, 2024 June.jpg",
+    "author": "Scott Edmunds",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Old_market_hall_in_Helsinki_in_Kaartinkaupunki,_Helsinki,_Finland,_2024_June.jpg"
   },
   {
     "slug": "rovaniemi-santa-claus-village",
