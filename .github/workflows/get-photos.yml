@@ -1,8 +1,11 @@
 name: Find Creative Commons travel photos
+
 on:
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,12 +14,40 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install --upgrade pillow
+      - name: Install image dependency
+        run: python -m pip install --upgrade pillow
       - name: Search and download Wikimedia Commons photos
         run: python fetch_photos.py
-      - name: Commit thumbnail candidates and credits
+      - name: Check search results
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('PHOTO_CREDITS.json')
+          if not p.exists():
+              raise SystemExit('PHOTO_CREDITS.json not created; inspect previous step')
+          results = json.loads(p.read_text(encoding='utf-8'))
+          found = [r for r in results if '下載成功' in r.get('status', '')]
+          print(f'Photos downloaded: {len(found)}/{len(results)}')
+          for r in results:
+              if '下載成功' not in r.get('status', ''):
+                  print(f"NOT DOWNLOADED {r.get('slug')}: {r.get('status')} {r.get('error', '')}")
+          with open('PHOTO_REVIEW.md', 'a', encoding='utf-8') as f:
+              f.write(f'\n\n此次自動下載結果：{len(found)}/{len(results)} 張。\n')
+          PY
+      - name: Commit photo candidates and credits
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add images PHOTO_CREDITS.json PHOTO_REVIEW.md photo-credits.html
-          if ! git diff --cached --quiet; then git commit -m 'Add open-licensed photo candidates and attribution'; git push; fi
+          git add -A -- PHOTO_CREDITS.json PHOTO_REVIEW.md photo-credits.html
+          if [ -d images ]; then
+            git add -A -- images
+          else
+            echo 'No images directory created; no photos downloaded.'
+          fi
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+          else
+            git commit -m 'Update open-licensed photo candidates and attribution'
+            git push origin HEAD:${{ github.ref_name }}
+          fi
