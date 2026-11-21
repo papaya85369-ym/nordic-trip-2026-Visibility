@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "vienna-stephansdom",
+    "query": "Stephansdom Vienna cathedral",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "vienna-am-hof-christmas",
+    "query": "Am Hof Christmas market Vienna",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "vienna-freyung-christmas",
+    "query": "Freyung Christmas market Vienna",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "vienna-stephansplatz-christmas",
+    "query": "Stephansplatz Christmas market Vienna",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "vienna-karlskirche",
+    "query": "Karlskirche Vienna church",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "vienna-rathausplatz-christmas",
+    "query": "Rathausplatz Christmas market Vienna",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "helsinki-senate-square",
+    "query": "Senate Square Helsinki",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "helsinki-uspenski-cathedral",
+    "query": "Uspenski Cathedral Helsinki",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "helsinki-cathedral",
+    "query": "Helsinki Cathedral",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "helsinki-old-market-hall",
+    "query": "Old Market Hall Helsinki",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "rovaniemi-santa-claus-village",
+    "query": "Santa Claus Village Rovaniemi",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "levi-christmas-market",
+    "query": "Levi Christmas market Sirkka Finland",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "levi-zero-point",
+    "query": "Levi Zero Point ski resort Finland",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "levi-panorama",
+    "query": "Levi Hotel Panorama Sirkka Finland",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "rovaniemi-arktikum",
+    "query": "Arktikum Rovaniemi",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "helsinki-loyly",
+    "query": "Loyly Helsinki sauna building",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "stockholm-city-hall",
+    "query": "Stockholm City Hall",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "stockholm-gamla-stan",
+    "query": "Gamla Stan Stockholm",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "stockholm-stortorget-christmas",
+    "query": "Stortorget Christmas Market Stockholm",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "stockholm-vasa-museum",
+    "query": "Vasa Museum Stockholm ship",
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "slug": "stockholm-skansen",
+    "query": "Skansen Stockholm Christmas market",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "oslo-opera-house",
+    "query": "Oslo Opera House",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "oslo-karl-johans-gate",
+    "query": "Karl Johans gate Oslo",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "bergen-bryggen",
+    "query": "Bryggen Bergen",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "bergen-fish-market",
+    "query": "Bergen Fish Market",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "bergen-floibanen",
+    "query": "Floibanen Bergen",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "bergen-christmas-market",
+    "query": "Bergen Christmas market Festplassen",
+    "status": "找不到可用照片，保留原插畫"
+  },
+  {
+    "slug": "vienna-schonbrunn-christmas",
+    "query": "Schonbrunn Palace Christmas market Vienna",
+    "status": "找不到可用照片，保留原插畫"
+  }
+]
