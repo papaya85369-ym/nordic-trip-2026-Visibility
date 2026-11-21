@@ -24,13 +24,13 @@
 | stockholm-gamla-stan | 查詢失敗，保留原插畫 | — |
 | stockholm-stortorget-christmas | 查詢失敗，保留原插畫 | — |
 | stockholm-vasa-museum | 查詢失敗，保留原插畫 | — |
-| stockholm-skansen | 找不到可用照片，保留原插畫 | — |
-| oslo-opera-house | 找不到可用照片，保留原插畫 | — |
-| oslo-karl-johans-gate | 找不到可用照片，保留原插畫 | — |
-| bergen-bryggen | 找不到可用照片，保留原插畫 | — |
-| bergen-fish-market | 找不到可用照片，保留原插畫 | — |
-| bergen-floibanen | 找不到可用照片，保留原插畫 | — |
-| bergen-christmas-market | 找不到可用照片，保留原插畫 | — |
-| vienna-schonbrunn-christmas | 找不到可用照片，保留原插畫 | — |
+| stockholm-skansen | 查詢失敗，保留原插畫 | — |
+| oslo-opera-house | 查詢失敗，保留原插畫 | — |
+| oslo-karl-johans-gate | 查詢失敗，保留原插畫 | — |
+| bergen-bryggen | 查詢失敗，保留原插畫 | — |
+| bergen-fish-market | 查詢失敗，保留原插畫 | — |
+| bergen-floibanen | 查詢失敗，保留原插畫 | — |
+| bergen-christmas-market | 查詢失敗，保留原插畫 | — |
+| vienna-schonbrunn-christmas | 查詢失敗，保留原插畫 | — |
 
 此次自動下載結果：0/28 張。

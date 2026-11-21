@@ -112,41 +112,49 @@
   {
     "slug": "stockholm-skansen",
     "query": "Skansen Stockholm Christmas market",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
   },
   {
     "slug": "oslo-opera-house",
     "query": "Oslo Opera House",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
   },
   {
     "slug": "oslo-karl-johans-gate",
     "query": "Karl Johans gate Oslo",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
   },
   {
     "slug": "bergen-bryggen",
     "query": "Bryggen Bergen",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
   },
   {
     "slug": "bergen-fish-market",
     "query": "Bergen Fish Market",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
   },
   {
     "slug": "bergen-floibanen",
     "query": "Floibanen Bergen",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
   },
   {
     "slug": "bergen-christmas-market",
     "query": "Bergen Christmas market Festplassen",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
   },
   {
     "slug": "vienna-schonbrunn-christmas",
     "query": "Schonbrunn Palace Christmas market Vienna",
-    "status": "找不到可用照片，保留原插畫"
+    "status": "查詢失敗，保留原插畫",
+    "error": "HTTP Error 429: Too Many Requests"
   }
 ]
