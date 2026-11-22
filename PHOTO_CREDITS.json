@@ -360,15 +360,14 @@
     "slug": "taoyuan-airport",
     "query": "Taoyuan International Airport terminal",
     "status": "已取得連結／待人工審核",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Taiwan_Taoyuan_International_Airport_-_Terminal_1.jpg/960px-Taiwan_Taoyuan_International_Airport_-_Terminal_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "photo_title": "File:Taiwan Taoyuan International Airport - Terminal 1.jpg",
-    "author": "毛貓大少爺",
-    "license": "CC BY-SA 2.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Taiwan_Taoyuan_International_Airport_-_Terminal_1.jpg",
-    "override": false,
-    "requested_file": "",
-    "override_error": "ValueError: Wikimedia Commons 找不到此指定檔案：File:Taoyuan Airport T2 Concourse D 18-07-2026.jpg\" title=\"Plum blossom TW, CC BY 4.0, via Wikimedia Commons\"><img width=\"600\" height=\"450\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Taoyuan Airport T2 Concourse D 18-07-2026.jpg/960px-Taoyuan"
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Taoyuan_Airport_T2_Concourse_D_18-07-2026.jpg/960px-Taoyuan_Airport_T2_Concourse_D_18-07-2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_title": "File:Taoyuan Airport T2 Concourse D 18-07-2026.jpg",
+    "author": "Plum blossom TW",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Taoyuan_Airport_T2_Concourse_D_18-07-2026.jpg",
+    "override": true,
+    "requested_file": "Taoyuan Airport T2 Concourse D 18-07-2026.jpg"
   },
   {
     "slug": "vienna-airport",
