@@ -2133,13 +2133,19 @@ document.addEventListener('DOMContentLoaded', function () {
   function apply(rows) {
     var links = {};
     (rows || []).forEach(function (r) { if (r && r.slug && r.url) links[r.slug] = r; });
-    document.querySelectorAll('img[data-photo], img[data-photo-file]').forEach(function (el) {
+    document.querySelectorAll('img[data-photo], img[data-photo-file]').forEach(function (el, i) {
       var r = links[el.getAttribute('data-photo')];
       var list = [];
-      if (r) list.push(r.url);
+      if (r) {
+        list.push(r.url);
+        // 備用網址：同一張照片換另一種尺寸，第一個網址暫時失敗時使用
+        var title = (r.photo_title || '').replace(/^File:/, '');
+        if (title) list.push('https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(title) + '?width=640');
+      }
       if (el.getAttribute('data-photo-file')) list.push(el.getAttribute('data-photo-file'));
       var credit = r ? ('照片：' + (r.author || 'Wikimedia Commons') + '／' + (r.license || '')) : '';
-      trySwap(el, list, credit);
+      // 錯開載入時間，避免一次送出太多請求被 Wikimedia 暫時擋下
+      setTimeout(function () { trySwap(el, list, credit); }, Math.min(i * 60, 4000));
     });
   }
   fetch('PHOTO_CREDITS.json', { cache: 'no-cache' })

@@ -2,7 +2,7 @@
    - 行程頁（index.html）與照片清單：有網路時抓最新版，沒網路時用手機裡存的版本
    - 照片、圖示、字型：看過一次就存起來，之後離線也能顯示
    改了 index.html 不用動這個檔案；只有大改離線邏輯時才需要把 VERSION 加 1 */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const PAGE_CACHE = 'nordic-page-' + VERSION;
 const MEDIA_CACHE = 'nordic-media-' + VERSION;
 const CORE = ['./', './index.html', './PHOTO_CREDITS.json', './apple-touch-icon.png', './manifest.json'];
@@ -38,14 +38,21 @@ function networkFirst(request) {
 }
 
 function cacheFirst(request) {
-  return caches.match(request).then(hit => hit || fetch(request).then(response => {
-    // opaque（跨網站圖片）status 為 0，也一併存起來
-    if (response && (response.ok || response.type === 'opaque')) {
-      const copy = response.clone();
-      caches.open(MEDIA_CACHE).then(cache => cache.put(request, copy));
-    }
-    return response;
-  }).catch(() => new Response('', { status: 504, statusText: 'offline' })));
+  return caches.match(request).then(hit => {
+    if (hit) return hit;
+    const url = new URL(request.url);
+    // Wikimedia 圖片用 CORS 抓，才看得到成功或失敗；失敗的圖片不存，下次會重抓
+    const viaCors = url.hostname.endsWith('wikimedia.org')
+      ? fetch(request.url, { mode: 'cors', credentials: 'omit' }).catch(() => fetch(request))
+      : fetch(request);
+    return viaCors.then(response => {
+      if (response && response.ok) {
+        const copy = response.clone();
+        caches.open(MEDIA_CACHE).then(cache => cache.put(request, copy));
+      }
+      return response;
+    });
+  }).catch(() => new Response('', { status: 504, statusText: 'offline' }));
 }
 
 self.addEventListener('fetch', event => {
