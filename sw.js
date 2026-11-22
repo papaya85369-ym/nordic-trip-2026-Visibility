@@ -2,7 +2,7 @@
    - 行程頁（index.html）與照片清單：有網路時抓最新版，沒網路時用手機裡存的版本
    - 照片、圖示、字型：看過一次就存起來，之後離線也能顯示
    改了 index.html 不用動這個檔案；只有大改離線邏輯時才需要把 VERSION 加 1 */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const PAGE_CACHE = 'nordic-page-' + VERSION;
 const MEDIA_CACHE = 'nordic-media-' + VERSION;
 const CORE = ['./', './index.html', './PHOTO_CREDITS.json', './apple-touch-icon.png', './manifest.json'];
@@ -26,7 +26,8 @@ self.addEventListener('activate', event => {
 });
 
 function networkFirst(request) {
-  return fetch(request).then(response => {
+  // cache: 'no-cache'：每次都向 GitHub 確認有沒有新版，避免上傳後還看到舊版
+  return fetch(request, { cache: 'no-cache' }).then(response => {
     if (response && response.ok) {
       const copy = response.clone();
       caches.open(PAGE_CACHE).then(cache => cache.put(request, copy));
