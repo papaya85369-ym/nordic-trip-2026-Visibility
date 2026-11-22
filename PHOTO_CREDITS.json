@@ -2,7 +2,7 @@
   {
     "slug": "vienna-stephansdom",
     "query": "Stephansdom Vienna cathedral",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/vienna-stephansdom.webp",
     "photo_title": "File:Stephansdom Barbarakapelle Gewölbe 01.JPG",
     "author": "Uoaei1",
@@ -13,7 +13,7 @@
   {
     "slug": "vienna-am-hof-christmas",
     "query": "Am Hof Christmas market Vienna",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/vienna-am-hof-christmas.webp",
     "photo_title": "File:Karl Wenzel Zajicek A Christmas market in Am Hof Vienna 1908.jpg",
     "author": "Carl Wenzel Zajicek",
@@ -24,7 +24,7 @@
   {
     "slug": "vienna-freyung-christmas",
     "query": "Freyung Christmas market Vienna",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/vienna-freyung-christmas.webp",
     "photo_title": "File:Christmas market - panoramio.jpg",
     "author": "fabiolah",
@@ -35,7 +35,7 @@
   {
     "slug": "vienna-stephansplatz-christmas",
     "query": "Stephansplatz Christmas market Vienna",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/vienna-stephansplatz-christmas.webp",
     "photo_title": "File:Christmas Market Outside St Stephen's Cathedral, Vienna.jpg",
     "author": "CoyotesKenning",
@@ -46,7 +46,7 @@
   {
     "slug": "vienna-karlskirche",
     "query": "Karlskirche Vienna church",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/vienna-karlskirche.webp",
     "photo_title": "File:20250502 Karlskirche Vienna.jpg",
     "author": "Flocci Nivis",
@@ -57,7 +57,7 @@
   {
     "slug": "vienna-rathausplatz-christmas",
     "query": "Rathausplatz Christmas market Vienna",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/vienna-rathausplatz-christmas.webp",
     "photo_title": "File:Christmas Market Vienna (375795453).jpg",
     "author": "Tony Hisgett from Birmingham, UK",
@@ -68,7 +68,7 @@
   {
     "slug": "helsinki-senate-square",
     "query": "Senate Square Helsinki",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/helsinki-senate-square.webp",
     "photo_title": "File:Helsinki Senate Square 20170130.jpg",
     "author": "Tyg728",
@@ -79,7 +79,7 @@
   {
     "slug": "helsinki-uspenski-cathedral",
     "query": "Uspenski Cathedral Helsinki",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/helsinki-uspenski-cathedral.webp",
     "photo_title": "File:0212 Helsinki Finnair sky wheel and Uspenski cathedral.jpg",
     "author": "Virtual-Pano",
@@ -90,7 +90,7 @@
   {
     "slug": "helsinki-cathedral",
     "query": "Helsinki Cathedral",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/helsinki-cathedral.webp",
     "photo_title": "File:0140 FIN Helsinki Main Lutheran Cathedral organ V-P.jpg",
     "author": "Virtual-Pano",
@@ -101,7 +101,7 @@
   {
     "slug": "helsinki-old-market-hall",
     "query": "Old Market Hall Helsinki",
-    "status": "下載成功／仍需人工確認是否對應景點",
+    "status": "下載成功／待人工審核",
     "file": "images/helsinki-old-market-hall.webp",
     "photo_title": "File:Old market hall in Helsinki in Kaartinkaupunki, Helsinki, Finland, 2024 June.jpg",
     "author": "Scott Edmunds",
@@ -112,109 +112,237 @@
   {
     "slug": "rovaniemi-santa-claus-village",
     "query": "Santa Claus Village Rovaniemi",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/rovaniemi-santa-claus-village.webp",
+    "photo_title": "File:Christmas House Santa Claus Village Rovaniemi 2022-09-15 05.jpg",
+    "author": "Leonhard Lenz",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Christmas_House_Santa_Claus_Village_Rovaniemi_2022-09-15_05.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "levi-christmas-market",
     "query": "Levi Christmas market Sirkka Finland",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "未下載成功／保留原插畫",
+    "error": "沒有通過授權及關聯性篩選的照片"
   },
   {
     "slug": "levi-zero-point",
     "query": "Levi Zero Point ski resort Finland",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/levi-zero-point.webp",
+    "photo_title": "File:Zero Point huts, Levi, Finland.jpg",
+    "author": "DanielMichaelPerry",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Zero_Point_huts,_Levi,_Finland.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "levi-panorama",
     "query": "Levi Hotel Panorama Sirkka Finland",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/levi-panorama.webp",
+    "photo_title": "File:Hotel Levi Panorama, Finland.jpg",
+    "author": "DanielMichaelPerry",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Hotel_Levi_Panorama,_Finland.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "rovaniemi-arktikum",
     "query": "Arktikum Rovaniemi",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/rovaniemi-arktikum.webp",
+    "photo_title": "File:Arctic Centre (Arktikum), Rovaniemi IMG 2668.jpg",
+    "author": "Jeanie Mackinder",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arctic_Centre_(Arktikum),_Rovaniemi_IMG_2668.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "helsinki-loyly",
     "query": "Loyly Helsinki sauna building",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/helsinki-loyly.webp",
+    "photo_title": "File:Löyly Sauna, Helsinki (2022).jpg",
+    "author": "Sandun De Silva",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:L%C3%B6yly_Sauna,_Helsinki_(2022).jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "stockholm-city-hall",
     "query": "Stockholm City Hall",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/stockholm-city-hall.webp",
+    "photo_title": "File:Stockholm City Hall February 2014 02.jpg",
+    "author": "Arild Vågen",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Stockholm_City_Hall_February_2014_02.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "stockholm-gamla-stan",
     "query": "Gamla Stan Stockholm",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/stockholm-gamla-stan.webp",
+    "photo_title": "File:Alley in Gamla Stan, Stockholm.jpg",
+    "author": "OleNeitzel",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alley_in_Gamla_Stan,_Stockholm.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "stockholm-stortorget-christmas",
     "query": "Stortorget Christmas Market Stockholm",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/stockholm-stortorget-christmas.webp",
+    "photo_title": "File:Christmas market at Stortorget in Stockholm, Uppland, Sweden (8251399571).jpg",
+    "author": "Swedish National Heritage Board from Sweden",
+    "license": "Public domain",
+    "license_url": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Christmas_market_at_Stortorget_in_Stockholm,_Uppland,_Sweden_(8251399571).jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "stockholm-vasa-museum",
     "query": "Vasa Museum Stockholm ship",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/stockholm-vasa-museum.webp",
+    "photo_title": "File:Lateral view of the Vasa ship, Vasa Museum, Stockholm, Sweden julesvernex2-2.jpg",
+    "author": "Jules Verne Times Two",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lateral_view_of_the_Vasa_ship,_Vasa_Museum,_Stockholm,_Sweden_julesvernex2-2.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "stockholm-skansen",
     "query": "Skansen Stockholm Christmas market",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/stockholm-skansen.webp",
+    "photo_title": "File:11 - 13 Market Street, Birkenhead.jpg",
+    "author": "Rodhullandemu",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:11_-_13_Market_Street,_Birkenhead.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "oslo-opera-house",
     "query": "Oslo Opera House",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/oslo-opera-house.webp",
+    "photo_title": "File:Oslo Opera House (Den Norske Opera & Ballett), Norway.jpg",
+    "author": "Christian David",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oslo_Opera_House_(Den_Norske_Opera_%26_Ballett),_Norway.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "oslo-karl-johans-gate",
     "query": "Karl Johans gate Oslo",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/oslo-karl-johans-gate.webp",
+    "photo_title": "File:00 7731 Oslo - Karl Johans gate.jpg",
+    "author": "W. Bulach",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:00_7731_Oslo_-_Karl_Johans_gate.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "bergen-bryggen",
     "query": "Bryggen Bergen",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/bergen-bryggen.webp",
+    "photo_title": "File:Bergen Bryggen 2986.jpg",
+    "author": "Anna Anichkova",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bergen_Bryggen_2986.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "bergen-fish-market",
     "query": "Bergen Fish Market",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/bergen-fish-market.webp",
+    "photo_title": "File:Bergen Fish Market - 2013.08 - panoramio.jpg",
+    "author": "rheins",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bergen_Fish_Market_-_2013.08_-_panoramio.jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "bergen-floibanen",
     "query": "Floibanen Bergen",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/bergen-floibanen.webp",
+    "photo_title": "File:Floibanen Winter Bergen Norway 2009 1.JPG",
+    "author": "Sveter",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Floibanen_Winter_Bergen_Norway_2009_1.JPG",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   },
   {
     "slug": "bergen-christmas-market",
     "query": "Bergen Christmas market Festplassen",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "未下載成功／保留原插畫",
+    "error": "沒有通過授權及關聯性篩選的照片"
   },
   {
     "slug": "vienna-schonbrunn-christmas",
     "query": "Schonbrunn Palace Christmas market Vienna",
-    "status": "查詢失敗，保留原插畫",
-    "error": "HTTP Error 429: Too Many Requests"
+    "status": "下載成功／待人工審核",
+    "file": "images/vienna-schonbrunn-christmas.webp",
+    "photo_title": "File:Christmas Market at Schönbrunn Palace in Vienna, Austria (16406086720).jpg",
+    "author": "traveljunction",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Christmas_Market_at_Sch%C3%B6nbrunn_Palace_in_Vienna,_Austria_(16406086720).jpg",
+    "override": false,
+    "requested_file": "",
+    "note": "縮圖已裁切及縮小；CC BY / BY-SA 請依原授權標示修改及署名"
   }
 ]
