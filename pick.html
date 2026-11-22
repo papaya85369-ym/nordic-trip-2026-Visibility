@@ -29,6 +29,14 @@ h2 small{font-size:12px;color:var(--acc-d);font-weight:500;white-space:nowrap}
 .bar div{max-width:760px;margin:auto;display:flex;gap:10px;align-items:center}
 .bar p{flex:1;margin:0;font-size:13px;color:var(--t2)}
 button.main{min-height:44px;padding:0 18px;border:0;border-radius:22px;background:var(--acc-d);color:#fff;font:600 15px/1 inherit;font-family:inherit}
+.tabs{display:flex;gap:8px;max-width:760px;margin:10px auto 0;padding:0 16px}
+.tabs button{min-height:40px;padding:0 14px;border:1px solid var(--bdr);border-radius:20px;background:#fff;color:var(--t2);font:600 14px/1 inherit;font-family:inherit}
+.tabs button.on{background:var(--acc-d);border-color:var(--acc-d);color:#fff}
+.tag{font-size:11px;font-weight:600;padding:2px 7px;border-radius:9px;background:#fdeee2;color:#b45f17;margin-left:6px;vertical-align:2px}
+.own{display:flex;gap:6px;margin-top:10px}
+.own input{flex:1;min-width:0;height:40px;border:1px solid var(--bdr);border-radius:10px;padding:0 10px;font:16px inherit;font-family:inherit}
+.own button{height:40px;padding:0 12px;border:1px solid var(--acc-d);border-radius:10px;background:#fff;color:var(--acc-d);font:600 14px inherit;font-family:inherit}
+.empty{font-size:13px;color:var(--t2);margin:0 0 8px}
 #out{display:none;max-width:760px;margin:16px auto;padding:0 12px}
 #out textarea{width:100%;height:220px;font:13px/1.4 ui-monospace,Menlo,monospace;border:1px solid var(--bdr);border-radius:10px;padding:10px}
 #out ol{padding-left:20px;font-size:14px;color:var(--t2)}
@@ -37,8 +45,9 @@ button.main{min-height:44px;padding:0 18px;border:0;border-radius:22px;backgroun
 <body>
 <header>
   <h1>挑選景點照片</h1>
-  <p>每個景點點一張喜歡的照片。不選就維持現在的照片。照片來自 Wikimedia Commons，載入可能要幾秒。</p>
+  <p>每個景點點一張喜歡的照片，不選就維持現在的照片。也可以在 Wikimedia Commons 找到喜歡的照片後，把網址貼到該景點下方。</p>
 </header>
+<div class="tabs"><button class="on" data-v="all">全部景點</button><button data-v="none">目前沒有照片</button></div>
 <main id="list"></main>
 <div id="out">
   <h2>設定檔已產生</h2>
@@ -54,58 +63,56 @@ button.main{min-height:44px;padding:0 18px;border:0;border-radius:22px;backgroun
 
 <script>
 {
-const C = [
- ["vienna-stephansdom","史蒂芬教堂",[["Wien - Stephansdom (1).JPG","西側正面"],["A-Wien-Stephansdom-Ansicht.JPG","南側"],["0181-0183a - Wien - Stephansdom.jpg","廣場全景"]]],
- ["vienna-stephansplatz-christmas","Stephansplatz 聖誕市集",[["20231222.Weihnachtsmarkt beim Stephansplatz.-006.jpg","2023 聖誕市集"],["Stephansplatz Wien 4.jpg","廣場與教堂"],["Vienna Stephansplatz (49579151733).jpg","廣場白天"]]],
- ["vienna-am-hof-christmas","Am Hof 聖誕市集",[["Wien, Am Hof, Weihnachtsmarkt.jpg","2018 市集"],["Karl Wenzel Zajicek Christkindlmarkt Am Hof.jpg","懷舊水彩畫"]]],
- ["vienna-freyung-christmas","Freyung 聖誕市集",[["Wien, Freyung, Altwiener Christkindlmarkt 2019.jpg","2019 市集"],["Wien, Altwiener Christkindlmarkt 2018 (3).jpg","2018 傍晚"],["Altwiener Christkindlmarkt 2011.jpg","2011 市集"]]],
- ["vienna-karlskirche","卡爾教堂",[["Karlskirche Wien Nacht.jpg","夜景倒影"],["Weihnachtsmarkt vor der Karlskirche in Wien 5.JPG","教堂前聖誕市集"],["Karlskirche im Dezember.jpg","12 月"]]],
- ["vienna-rathausplatz-christmas","市政廳聖誕市集",[["Wien - Christkindlmarkt, Rathausplatz.JPG","2017 市集"],["Wiener Christkindlmarkt und Christbaum.jpg","夜晚聖誕樹"],["Rathaus Wien Christkindlmarkt Panorama.jpg","全景"]]],
- ["vienna-schonbrunn-christmas","美泉宮聖誕市集",[["Markt und Schloß Schönbrunn Foto G. Fally.JPG","市集與宮殿"],["Schoenbrunn Christmas market 2018.jpg","2018 夜晚"],["Schloss Schönbrunn - Adventmarkt 2.jpg","降臨期市集"]]],
- ["helsinki-senate-square","參議院廣場",[["Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg","2026 春"],["Senate Square in Helsinki.jpg","廣場全景"],["Senate Square Helsinki.JPG","夏天"]]],
- ["helsinki-cathedral","白教堂",[["Helsinki Cathedral and Alexander II Monument in Winter (2022).jpg","冬天"],["Helsinki Cathedral.jpg","從廣場看"],["Helsinki's Cathedral.jpg","正面"]]],
- ["helsinki-uspenski-cathedral","紅教堂",[["Uspenski Cathedral in Winter, Helsinki (2023).jpg","冬天"],["Helsinki Uspenski Cathedral 01.jpg","正面"],["Uspenski Cathedral Helsinki 2012.jpg","早春"]]],
- ["helsinki-esplanadi","Esplanadi 公園",[["Esplanade-helsinki-hiver.JPG","冬天"],["Esplanade park winter - Marit Henriksson.jpg","雪景"],["Esplanadi is an park in Helsinki, Finland. 06.jpg","夏天"]]],
- ["viking-line-ferry","赫爾辛基–斯德哥爾摩渡輪",[["Viking line's MS Gabriella in Stockholm.jpg","Gabriella 號"],["Departure from Helsinki - Gabriella - Viking Line - From Helsinki to Stockholm - 53131420518.jpg","從赫爾辛基出發"],["Viking XPRS 2008-04-29.jpg","Viking XPRS"]]],
- ["rovaniemi-santa-claus-village","聖誕老人村",[["Santa Claus Village (5306867729).jpg","冬夜"],["Santa Claus Village.jpg","2023 冬"],["Rovaniemi pajakyla 2.jpg","12 月"]]],
- ["levi-village","Levi 小鎮",[["Gondola in Levi, Finland.jpg","纜車與小鎮"],["Levi hiihtokeskus 2003.jpg","滑雪場"],["View from Levi, Sirkka, Finland.jpg","山上遠眺"]]],
- ["stockholm-city-hall","斯德哥爾摩市政廳",[["Stockholm-City-Hall-Winter-2010.jpg","冬天"],["Stockholms Stadshuset City Hall Stockholm 2016 01.jpg","1 月傍晚"],["Stockholm City Hall February 2014 01.jpg","夜景"]]],
- ["stockholm-stortorget-christmas","Stortorget 聖誕市集",[["Julmarknad på Stortorget, Gamla stan, Stockholm, 2017m.jpg","2017 市集"],["Julmarknad på Stortorget, Gamla stan, Stockholm, 2017b.jpg","攤位"],["Gamla stans Julmarknad 2009c.jpg","夜晚"]]],
- ["stockholm-vasa-museum","瓦薩博物館",[["Stockholm Muzeum Vasa 02.jpg","瓦薩號"],["Vasa stockholm.JPG","船身"],["Wasa Museum - Stockholm - Exterior.jpg","博物館外觀"]]],
- ["stockholm-skansen","Skansen 聖誕市集",[["Skansens julmarknad 2013.jpg","聖誕市集"],["Skansen (39566474324).jpg","冬天"],["Skansens Bergbanan winter 2023 (1).jpg","冬天纜車"]]],
- ["stockholm-clarion-amaranten","Clarion Hotel Amaranten",[["Clarion Hotel Amaranten, 20221125.jpg","2022 外觀"],["Clarion-hotel-amaranten-stockholm.jpg","外觀"],["Amaranten Stockholm.jpg","外觀"]]],
- ["oslo-opera-house","奧斯陸歌劇院",[["Oslo Opera House - 49565247818 Norway February 2020 Bernt Rostad CC BY 2.0.jpg","冬天清晨"],["Operahuset i Oslo en vinterdag.jpg","冬日"],["Oslo in the winter - Opera (night).jpg","冬夜"]]],
- ["flam-station","Flåm 車站",[["Flåmsbana train at Flåm Station.jpg","火車進站"],[".00 1230 Flåmsbana und Bahnhof von Flåm, Norwegen.jpg","車站與火車頭"]]],
- ["gudvangen","Gudvangen",[["Nærøyfjorden mot Gudvangen.jpg","峽灣"],["Nærøyfjord (Kaupanger - Gudvangen) - panoramio.jpg","峽灣航線"],["Naerofjord (i.e., Nærøyfjord) from Gudvangen, Sognefjord, Norway-LCCN2001700720.jpg","彩色老照片"]]],
- ["voss","Voss",[["Vossavangen.jpg","湖邊市區"],["Voss Church (Voss kirke kyrkje, Vangskyrkja), medieval stone church 1277, Vossevangen, Norway, snow, etc. DSC00492.jpg","雪中教堂"]]],
- ["bergen-bryggen","Bryggen 碼頭",[["Bryggen i Bergen - vinter 2025.jpg","2025 冬天"],["Bryggen the German Wharf in Bergen.jpg","12 月夜景"],["Bergen.Bryggen.1.jpg","白天"]]],
- ["bergen-floibanen","Fløibanen 纜車",[["Floibanen Winter Bergen Norway 2009 1.JPG","冬天"],["Fløibanen as seen from Fløyen.jpg","從山上看"],["Fløybanen - Funicular.JPG","纜車車廂"]]]
-];
+const C = [["taoyuan-airport","Taiwan Taoyuan International Airport",[]],["vienna-airport","Vienna International Airport",[]],["vienna-hotel-korotan","Hotel Korotan",[]],["vienna-stephansdom","史蒂芬教堂 · Stephansdom",[["Wien - Stephansdom (1).JPG","西側正面"],["A-Wien-Stephansdom-Ansicht.JPG","南側"],["0181-0183a - Wien - Stephansdom.jpg","廣場全景"]]],["vienna-am-hof-christmas","Am Hof Christmas Market",[["Wien, Am Hof, Weihnachtsmarkt.jpg","2018 市集"],["Karl Wenzel Zajicek Christkindlmarkt Am Hof.jpg","懷舊水彩畫"]]],["vienna-freyung-christmas","Freyung Christmas Market",[["Wien, Freyung, Altwiener Christkindlmarkt 2019.jpg","2019 市集"],["Wien, Altwiener Christkindlmarkt 2018 (3).jpg","2018 傍晚"],["Altwiener Christkindlmarkt 2011.jpg","2011 市集"]]],["vienna-stephansplatz-christmas","Stephansplatz Christmas Market",[["20231222.Weihnachtsmarkt beim Stephansplatz.-006.jpg","2023 聖誕市集"],["Stephansplatz Wien 4.jpg","廣場與教堂"],["Vienna Stephansplatz (49579151733).jpg","廣場白天"]]],["vienna-steffl","STEFFL Department Store",[]],["vienna-verde","午餐｜Verde 備案",[]],["vienna-karlskirche","卡爾教堂 · Karlskirche",[["Karlskirche Wien Nacht.jpg","夜景倒影"],["Weihnachtsmarkt vor der Karlskirche in Wien 5.JPG","教堂前聖誕市集"],["Karlskirche im Dezember.jpg","12 月"]]],["vienna-rathausplatz-christmas","市政廳聖誕市集 · Rathausplatz",[["Wien - Christkindlmarkt, Rathausplatz.JPG","2017 市集"],["Wiener Christkindlmarkt und Christbaum.jpg","夜晚聖誕樹"],["Rathaus Wien Christkindlmarkt Panorama.jpg","全景"]]],["helsinki-airport","Helsinki Airport",[]],["helsinki-central-station","Helsinki Central Station",[]],["helsinki-senate-square","參議院廣場 · Senate Square",[["Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg","2026 春"],["Senate Square in Helsinki.jpg","廣場全景"],["Senate Square Helsinki.JPG","夏天"]]],["helsinki-uspenski-cathedral","紅教堂 · Uspenski Cathedral",[["Uspenski Cathedral in Winter, Helsinki (2023).jpg","冬天"],["Helsinki Uspenski Cathedral 01.jpg","正面"],["Uspenski Cathedral Helsinki 2012.jpg","早春"]]],["helsinki-cathedral","白教堂 · Helsinki Cathedral",[["Helsinki Cathedral and Alexander II Monument in Winter (2022).jpg","冬天"],["Helsinki Cathedral.jpg","從廣場看"],["Helsinki's Cathedral.jpg","正面"]]],["helsinki-esplanadi","Esplanadi",[["Esplanade-helsinki-hiver.JPG","冬天"],["Esplanade park winter - Marit Henriksson.jpg","雪景"],["Esplanadi is an park in Helsinki, Finland. 06.jpg","夏天"]]],["helsinki-old-market-hall","Old Market Hall · 港口市集",[]],["vr-night-train","VR Night Train",[["Finnish Edm sleeping car.JPG","雙層臥鋪車廂"],["Santa Claus Express.JPG","車上標誌"],["VR Sleeper train interiors 20170201.jpg","臥鋪內部"]]],["rovaniemi-railway-station","Rovaniemi Railway Station",[]],["rovaniemi-santas-hotel","Santa’s Hotel Santa Claus",[]],["rovaniemi-santa-claus-village","Santa Claus Village",[["Santa Claus Village (5306867729).jpg","冬夜"],["Santa Claus Village.jpg","2023 冬"],["Rovaniemi pajakyla 2.jpg","12 月"]]],["rovaniemi-salmon-place","Santa’s Salmon Place",[]],["rovaniemi-maakuntakatu","Santa Claus City Office｜聖誕老人城市辦公室",[]],["rovaniemi-koskikatu","Santa’s Gift Company｜聖誕禮物店",[]],["rovaniemi-bus-station","Rovaniemi Bus Station",[]],["levi-village","Hissitie L · Levi",[["Gondola in Levi, Finland.jpg","纜車與小鎮"],["Levi hiihtokeskus 2003.jpg","滑雪場"],["View from Levi, Sirkka, Finland.jpg","山上遠眺"]]],["levi-sirkantahti","Lapland Hotels Sirkantähti",[]],["levi-christmas-market","Levi Christmas Market",[]],["levi-zero-point","Zero Point｜Front Slopes",[]],["levi-panorama","Express Gondola → Panorama",[]],["lapland-reindeer-sledge","Northern Lights Reindeer Sledge Ride",[["Reindeer Sleigh Ride-Lapland.jpg","馴鹿雪橇"],["Reindeer Ride.jpg","馴鹿雪橇"],["Hietaliete forest in snow with reindeer sled.jpg","雪林中的雪橇"]]],["lapland-husky-safari","Husky Safari 5 km Self-Drive",[["Husky Dogs (301004607).jpg","哈士奇"],["White huskies dog sledding.jpg","雪橇犬"],["Wa husky4.jpg","雪橇犬隊"]]],["levi-reindeer-manor","Reindeer Manor Levi",[]],["rovaniemi-arktikum","Rovaniemi City Centre / Arktikum",[]],["helsinki-loyly","Löyly Helsinki",[]],["helsinki-katajanokka-terminal","Viking Line Katajanokka Terminal",[]],["viking-line-ferry","Helsinki–Stockholm Ferry",[["Viking line's MS Gabriella in Stockholm.jpg","Gabriella 號"],["Departure from Helsinki - Gabriella - Viking Line - From Helsinki to Stockholm - 53131420518.jpg","從赫爾辛基出發"],["Viking XPRS 2008-04-29.jpg","Viking XPRS"]]],["stockholm-ferry-terminal","Stockholm Ferry Terminal",[]],["stockholm-clarion-amaranten","Clarion Hotel Amaranten",[["Clarion Hotel Amaranten, 20221125.jpg","2022 外觀"],["Clarion-hotel-amaranten-stockholm.jpg","外觀"],["Amaranten Stockholm.jpg","外觀"]]],["stockholm-city-hall","Stockholm City Hall",[["Stockholm-City-Hall-Winter-2010.jpg","冬天"],["Stockholms Stadshuset City Hall Stockholm 2016 01.jpg","1 月傍晚"],["Stockholm City Hall February 2014 01.jpg","夜景"]]],["stockholm-hotorgshallen","Kajsas Fisk · Hötorgshallen",[]],["stockholm-gamla-stan","Gamla Stan",[]],["stockholm-stortorget-christmas","Stortorget Christmas Market",[["Julmarknad på Stortorget, Gamla stan, Stockholm, 2017m.jpg","2017 市集"],["Julmarknad på Stortorget, Gamla stan, Stockholm, 2017b.jpg","攤位"],["Gamla stans Julmarknad 2009c.jpg","夜晚"]]],["stockholm-gastabud","Stockholms Gästabud",[]],["stockholm-vasa-museum","Vasa Museum",[["Stockholm Muzeum Vasa 02.jpg","瓦薩號"],["Vasa stockholm.JPG","船身"],["Wasa Museum - Stockholm - Exterior.jpg","博物館外觀"]]],["stockholm-djurgarden","Djurgården",[]],["stockholm-skansen","Skansen & Christmas Market",[["Skansens julmarknad 2013.jpg","聖誕市集"],["Skansen (39566474324).jpg","冬天"],["Skansens Bergbanan winter 2023 (1).jpg","冬天纜車"]]],["stockholm-strandvagen","Strandvägen",[]],["stockholm-kungstradgarden","Kungsträdgården → NK",[]],["stockholm-vete-katten","Vete-Katten",[]],["stockholm-central-station","Stockholm Central Station",[]],["oslo-central-station","Oslo S",[]],["oslo-home-hotel-folketeateret","Home Hotel Folketeateret",[]],["oslo-opera-house","Oslo Opera House & Waterfront",[["Oslo Opera House - 49565247818 Norway February 2020 Bernt Rostad CC BY 2.0.jpg","冬天清晨"],["Operahuset i Oslo en vinterdag.jpg","冬日"],["Oslo in the winter - Opera (night).jpg","冬夜"]]],["oslo-karl-johans-gate","Karl Johans gate",[["Karl Johans gate, vinter 2025.jpg","冬天"],["3 of 10 - Karl Johan Gate at Night, Oslo - NORWAY.jpg","夜景"],["Karl Johans gate Oslo 01.JPG","從王宮看"]]],["myrdal-station","Myrdal Station",[]],["flam-station","Flåm Station",[["Flåmsbana train at Flåm Station.jpg","火車進站"],[".00 1230 Flåmsbana und Bahnhof von Flåm, Norwegen.jpg","車站與火車頭"]]],["flam-marina","Flåm Marina",[["Flåm - Aurlandsfjord.jpg","峽灣"],["Aurlandsfjorden from Flam.jpg","峽灣全景"]]],["flam-village","Flåm Village & Harbour",[]],["flam-aegir-brewpub","Ægir BrewPub",[]],["flam-pier","Flåm Pier",[["Flåm harbour.jpg","Flåm 港口"],["Flåm ferjekai.jpg","渡輪碼頭"],["00 2795 Flåm, a place in Norway.jpg","車站與港口"]]],["gudvangen","Gudvangen",[["Nærøyfjorden mot Gudvangen.jpg","峽灣"],["Nærøyfjord (Kaupanger - Gudvangen) - panoramio.jpg","峽灣航線"],["Naerofjord (i.e., Nærøyfjord) from Gudvangen, Sognefjord, Norway-LCCN2001700720.jpg","彩色老照片"]]],["voss","Voss",[["Vossavangen.jpg","湖邊市區"],["Voss Church (Voss kirke kyrkje, Vangskyrkja), medieval stone church 1277, Vossevangen, Norway, snow, etc. DSC00492.jpg","雪中教堂"]]],["bergen-station","Bergen Station",[]],["bergen-magic-kloverhuset","Magic Kløverhuset Harbour Hotel",[]],["bergen-bryggen","Bryggen Night View",[["Bryggen i Bergen - vinter 2025.jpg","2025 冬天"],["Bryggen the German Wharf in Bergen.jpg","12 月夜景"],["Bergen.Bryggen.1.jpg","白天"]]],["bergen-trekroneren","Trekroneren｜挪威熱狗",[]],["bergen-fish-market","Bergen Fish Market",[]],["bergen-bryggeloftet","Bryggeloftet & Stuene｜午餐",[]],["bergen-floibanen","Fløibanen / Mount Fløyen",[["Floibanen Winter Bergen Norway 2009 1.JPG","冬天"],["Fløibanen as seen from Fløyen.jpg","從山上看"],["Fløybanen - Funicular.JPG","纜車車廂"]]],["bergen-christmas-market","Bergen Christmas Market｜Festplassen",[["Festplassen i Bergen.jpg","Festplassen 廣場"],["Lysfesten - Bergen, Norway.jpg","Bergen 點燈節"]]],["bergen-city-centre","Bergen 晚間自由散步／超市採買",[]],["bergen-line-train","Bergen–Oslo Night Train",[]],["oslo-city-centre","Oslo City Centre",[["Karl Johans gate, vinter 2025.jpg","冬天街景"],["3 of 10 - Karl Johan Gate at Night, Oslo - NORWAY.jpg","夜景"]]],["oslo-airport","Oslo Airport · OSL",[]],["vienna-hotel-schonbrunn","Hotel Wien Schönbrunn",[]],["vienna-schonbrunn-christmas","Schönbrunn Palace Christmas Market",[["Markt und Schloß Schönbrunn Foto G. Fally.JPG","市集與宮殿"],["Schoenbrunn Christmas market 2018.jpg","2018 夜晚"],["Schloss Schönbrunn - Adventmarkt 2.jpg","降臨期市集"]]]];
 const thumb = f => 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(f) + '?width=400';
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const pick = {};            // slug -> filename | "NONE" | undefined (keep current)
 let current = {}, existing = {};
 
+let view = 'all';
 function render() {
-  document.getElementById('list').innerHTML = C.map(([slug, name, opts]) => {
+  const list = C.filter(([slug]) => view === 'all' || !current[slug]);
+  document.getElementById('list').innerHTML = list.map(([slug, name, opts]) => {
     const cur = current[slug];
     const chosen = pick[slug];
+    const known = opts.some(o => o[0] === chosen) || chosen === 'NONE' || chosen === undefined;
     const curOpt = cur ? `<button class="opt ${chosen === undefined ? 'on' : ''}" data-s="${slug}" data-f=""><img loading="lazy" referrerpolicy="no-referrer" src="${esc(cur)}" alt=""><span>維持現在</span></button>` : '';
-    return `<section><h2>${esc(name)}<small>${chosen === undefined ? '' : chosen === 'NONE' ? '改用插畫' : '已選新照片'}</small></h2><div class="row">${curOpt}${
+    const ownOpt = !known ? `<button class="opt on" data-s="${slug}" data-f="${esc(chosen)}"><img loading="lazy" referrerpolicy="no-referrer" src="${thumb(chosen)}" alt=""><span>自己指定的照片</span></button>` : '';
+    const status = chosen === undefined ? (cur ? '' : '<span class="tag">目前沒有照片</span>') : `<small>${chosen === 'NONE' ? '改用插畫' : '已選新照片'}</small>`;
+    return `<section><h2><span>${esc(name)}${chosen === undefined && !cur ? status : ''}</span>${chosen !== undefined ? status : ''}</h2>${
+      opts.length ? '' : '<p class="empty">還沒有候選照片，可以在下面貼上 Wikimedia 的檔名。</p>'
+    }<div class="row">${curOpt}${ownOpt}${
       opts.map(([f, label]) => `<button class="opt ${chosen === f ? 'on' : ''}" data-s="${slug}" data-f="${esc(f)}"><img loading="lazy" referrerpolicy="no-referrer" src="${thumb(f)}" alt=""><span>${esc(label)}</span></button>`).join('')
-    }<button class="opt none ${chosen === 'NONE' ? 'on' : ''}" data-s="${slug}" data-f="NONE"><div>不放照片<br>用原本插畫</div></button></div></section>`;
-  }).join('');
+    }<button class="opt none ${chosen === 'NONE' ? 'on' : ''}" data-s="${slug}" data-f="NONE"><div>不放照片<br>用原本插畫</div></button></div>
+    <form class="own" data-s="${slug}"><input placeholder="貼上 Wikimedia 檔名或網址" aria-label="${esc(name)} 自訂照片"><button>使用</button></form></section>`;
+  }).join('') || '<p class="empty" style="padding:16px">全部景點都有照片了 🎉</p>';
   document.querySelectorAll('.opt img').forEach(img => img.addEventListener('error', () => img.parentElement.classList.add('broken')));
   const n = Object.keys(pick).length;
   document.getElementById('count').textContent = n ? `已改 ${n} 個景點` : '尚未選擇';
 }
 
+function save() { try { localStorage.setItem('nordic-pick', JSON.stringify(pick)); } catch (err) {} }
+document.querySelector('.tabs').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  view = b.dataset.v;
+  document.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b));
+  render();
+});
+document.getElementById('list').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target, raw = f.querySelector('input').value.trim(); if (!raw) return;
+  let name = raw;
+  const m = raw.match(/(?:File:|檔案:)([^?#]+)/i);
+  if (m) name = m[1];
+  try { name = decodeURIComponent(name); } catch (err) {}
+  name = name.replace(/_/g, ' ').trim();
+  pick[f.dataset.s] = name; save(); render();
+});
 document.getElementById('list').addEventListener('click', e => {
   const b = e.target.closest('.opt'); if (!b) return;
   const s = b.dataset.s, f = b.dataset.f;
   if (!f) delete pick[s]; else pick[s] = f;
-  try { localStorage.setItem('nordic-pick', JSON.stringify(pick)); } catch (err) {}
-  render();
+  save(); render();
 });
 
 document.getElementById('make').addEventListener('click', () => {
