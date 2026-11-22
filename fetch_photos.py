@@ -252,6 +252,10 @@ def link_record(slug, query, page, override_filename):
 
 
 def find_link(slug, query, override_filename=None):
+    if override_filename and override_filename.upper() == "NONE":
+        # "NONE" in PHOTO_OVERRIDES.json = no photo, keep the illustration
+        return {"slug": slug, "query": query, "status": "指定不使用照片／保留原插畫",
+                "requested_file": "NONE"}
     if override_filename:
         page = exact_page(override_filename)
         if not photo_metadata(page)[0]:
@@ -330,8 +334,9 @@ def main():
     for n, (slug, query) in enumerate(QUERIES.items(), 1):
         old = old_by_slug.get(slug, {})
         override = overrides.get(slug)
-        keep = (not force and old.get("url")
-                and (not override or same_file(old.get("requested_file"), override)))
+        keep = (not force and (old.get("url") or old.get("requested_file") == "NONE")
+                and (not override or same_file(old.get("requested_file"), override))
+                and not (old.get("requested_file") == "NONE" and override != "NONE"))
         if keep:
             results[slug] = old
             print(f"[{n}/{len(QUERIES)}] {slug}: kept existing link", flush=True)
