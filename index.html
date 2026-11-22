@@ -563,7 +563,16 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 .v64-photo-info {margin-top:16px;padding:13px 15px;border-radius:12px;background:#f5f8f6;color:#62766b;font-size:11px;line-height:1.7;}
 .v64-photo-info h3 {font-size:13px;color:#476859;margin:0 0 4px;}
 .v64-photo-info p {margin:0;}
-</style><meta content="noindex, nofollow" name="robots"/></head><body>
+</style><meta content="noindex, nofollow" name="robots"/><style>
+/* 行程：今天標記 + 左右滑換天的動畫 */
+.day-chip.is-today{position:relative}
+.day-chip.is-today::after{content:"今天";position:absolute;top:-7px;right:-4px;background:#d4721e;color:#fff;font-size:9px;line-height:1;padding:3px 5px;border-radius:8px;font-weight:700}
+@keyframes v7InL{from{opacity:.25;transform:translateX(36px)}to{opacity:1;transform:none}}
+@keyframes v7InR{from{opacity:.25;transform:translateX(-36px)}to{opacity:1;transform:none}}
+.day-section.v7-in-l{animation:v7InL .22s ease-out}
+.day-section.v7-in-r{animation:v7InR .22s ease-out}
+@media (prefers-reduced-motion:reduce){.day-section.v7-in-l,.day-section.v7-in-r{animation:none}}
+</style></head><body>
 <section class="v51-page" id="overview-guide">
 <div class="v57-header"><div class="v57-eyebrow">TRIP OVERVIEW</div><h2 class="v57-heading">旅程總覽</h2><p class="v57-subtitle">2026.11.27 — 12.12 · 北歐 16 天 · 2 人同行</p></div>
 <div class="v51-card">
@@ -725,7 +734,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>Hotel Korotan → Stephansplatz：步行至 Albertgasse → 電車 2 號往 Friedrich-Engels-Platz → 在 Parlament／Volkstheater 一帶下車 → Volkstheater 搭 U3 往 Simmering → Stephansplatz。含步行與候車約 25–30 分。</p></div>
-</article><article class="v54-card sight">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>Stephansdom → Am Hof</b> · 10–12 min<small>沿 Graben 步行</small></span></div><article class="v54-card sight">
 <input aria-label="展開 Am Hof Christmas Market 詳細介紹" class="v54-expand" id="v62-expand-501" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="vienna-am-hof-christmas" alt="景點示意插畫" class="v54-thumb" data-photo-file="images/vienna-am-hof-christmas.webp" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23DCEAE3%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%23709681%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%23709681%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E"/>
@@ -736,7 +745,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>從 Stephansdom 沿 Graben 步行約 10–12 分到 Am Hof。週六市集約 10:00 開始。</p></div>
-</article><article class="v54-card sight">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>Am Hof → Freyung</b> · 3–5 min<small>步行，不需搭車</small></span></div><article class="v54-card sight">
 <input aria-label="展開 Freyung Christmas Market 詳細介紹" class="v54-expand" id="v62-expand-502" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="vienna-freyung-christmas" alt="景點示意插畫" class="v54-thumb" data-photo-file="images/vienna-freyung-christmas.webp" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23DCEAE3%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%23709681%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%23709681%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E"/>
@@ -747,7 +756,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>從 Am Hof 步行約 3–5 分鐘到 Freyung；不需搭車。</p></div>
-</article><article class="v54-card sight">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>Freyung → Stephansplatz</b> · 12–15 min<small>經 Herrengasse、Graben 步行</small></span></div><article class="v54-card sight">
 <input aria-label="展開 Stephansplatz Christmas Market 詳細介紹" class="v54-expand" id="v62-expand-503" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="vienna-stephansplatz-christmas" alt="景點插畫（離線可用）" class="v54-thumb" data-photo-file="images/vienna-stephansplatz-christmas.webp" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23DCEAE3%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%23709681%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%23709681%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E" title="圖片來源：Vienna Online；需網路載入，離線顯示原始插畫"/>
@@ -758,7 +767,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>從 Freyung 經 Herrengasse、Graben 步行約 12–15 分；週六市集約 11:00 開始。</p></div>
-</article><article class="v54-card other">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>Stephansplatz → STEFFL</b> · 5 min<small>沿 Kärntner Straße 步行</small></span></div><article class="v54-card other">
 <input aria-label="展開 STEFFL Department Store 詳細介紹" class="v54-expand" id="v54-expand-6" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="vienna-steffl" alt="購物示意插畫" class="v54-thumb" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23EFE6E9%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%23B68E9B%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%23B68E9B%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E"/>
@@ -769,7 +778,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>Stephansplatz → STEFFL：沿 Kärntner Straße 步行約 5 分鐘。週六營業至 18:00；不需要傍晚再折返。</p></div>
-</article><article class="v54-card food">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>STEFFL → Verde</b> · 10–15 min<small>步行至 Wallnerstraße 2</small></span></div><article class="v54-card food">
 <input aria-label="展開 午餐｜Verde 備案 詳細介紹" class="v54-expand" id="v62-expand-504" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="vienna-verde" alt="購物示意插畫" class="v54-thumb" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23EFE6E9%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%23B68E9B%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%23B68E9B%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E"/>
@@ -791,7 +800,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>老城區午餐 → Hotel Korotan：可走 Herrengasse → U3 往 Ottakring → Volkstheater → 轉電車 2 號往 Dornbach → Albertgasse 下車 → 步行。含候車約 25–35 分；出發前依午餐位置確認路線。</p></div>
-</article><article class="v54-card sight">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" viewbox="0 0 24 24"><rect height="16" rx="3" width="14" x="5" y="3"></rect><path d="M5 12h14m-10 7-2 3m8-3 2 3M9 7h6"></path></svg><span class="v54-transfer-text"><b>Hotel Korotan → Karlskirche</b> · 25–35 min<small>Albertgasse Tram 2 → Oper/Karlsplatz → 步行</small></span></div><article class="v54-card sight">
 <input aria-label="展開 卡爾教堂 · Karlskirche 詳細介紹" class="v54-expand" id="v54-expand-7" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="vienna-karlskirche" alt="景點示意插畫" class="v54-thumb" data-photo-file="images/vienna-karlskirche.webp" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23DCEAE3%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%23709681%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%23709681%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E"/>
@@ -1075,7 +1084,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>Levintie 1630。13:45 抵達 Levi 後，雪地拖行李約 7–10 分鐘到飯店；14:00–15:00 辦理入住／寄放行李、換上保暖鞋襪。冬季路面易滑，先熟悉附近超市與晚間集合位置。</p></div>
-</article><div class="v54-transfer v54-unverified"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text">前往下一站 · 交通時間待確認</span></div><article class="v54-card other">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>Sirkantähti → Levi Village</b> · 步行<small>從飯店步行至小鎮中心步行街</small></span></div><article class="v54-card other">
 <input aria-label="展開 Levi Village · 雪地小鎮漫步 詳細介紹" class="v54-expand" id="v54-expand-32" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="levi-village" alt="雪國散步示意插畫" class="v54-thumb" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23E5ECE7%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E"/>
@@ -1086,7 +1095,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>以 Levi Village 中心步行街為主，從 Sirkantähti 出發；下午日照短，把纜車放在 15:30 左右。</p></div>
-</article><article class="v54-card sight">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>Levi Village → Christmas Market</b> · 5–10 min<small>步行</small></span></div><article class="v54-card sight">
 <input aria-label="展開 Levi Christmas Market 詳細介紹" class="v54-expand" id="v62-expand-506" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="levi-christmas-market" alt="景點插畫（離線可用）" class="v54-thumb" data-photo-file="images/levi-christmas-market.webp" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23E5ECE7%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E" title="圖片來源：Levi.fi；需網路載入，離線顯示原始插畫"/>
@@ -1097,7 +1106,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>Levi Village → Christmas Market 約 5–10 分步行。冬季營業和極寒臨時關閉以當日公告為準。</p></div>
-</article><article class="v54-card sight">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>Christmas Market → Zero Point</b> · 數分鐘<small>步行</small></span></div><article class="v54-card sight">
 <input aria-label="展開 Zero Point｜Front Slopes 詳細介紹" class="v54-expand" id="v62-expand-507" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="levi-zero-point" alt="景點插畫（離線可用）" class="v54-thumb" data-photo-file="images/levi-zero-point.webp" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23E5ECE7%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E" title="圖片來源：Levi.fi；需網路載入，離線顯示原始插畫"/>
@@ -1108,7 +1117,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>Levi Christmas Market → Zero Point 只需步行數分鐘；欣賞雪坡、纜車與滑雪場風景。</p></div>
-</article><article class="v54-card sight">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>Zero Point → Panorama</b> · 纜車<small>搭 Express 景觀纜車上山，往返後回小鎮</small></span></div><article class="v54-card sight">
 <input aria-label="展開 Express Gondola → Panorama 詳細介紹" class="v54-expand" id="v62-expand-508" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="levi-panorama" alt="景點插畫（離線可用）" class="v54-thumb" data-photo-file="images/levi-panorama.webp" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23E5ECE7%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E" title="圖片來源：Levi.fi；需網路載入，離線顯示原始插畫"/>
@@ -1861,7 +1870,7 @@ a.v63-text-link {font-size:inherit!important;line-height:inherit!important;font-
 </div>
 </div>
 <div class="v54-detail"><div class="v54-detail-title">詳細介紹</div><p>12/10 日落早，午餐後盡量 14:15 上山，15:30 前下山；纜車票視當日能見度決定，未購票。</p><p><a class="v63-text-link" href="https://www.floyen.no/en/floibanen" rel="noopener" target="_blank">Fløibanen 官網 ↗</a></p></div>
-</article><article class="v54-card sight">
+</article><div class="v54-transfer"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 5c-1 2-1 4-2 6-1 2-3 3-3 5 0 2 3 3 5 2 3-1 3-4 3-6 0-3-1-6-3-7ZM17 9c1 2 1 4 2 6 1 2 2 3 2 5 0 2-3 3-5 2-3-1-3-4-3-6 0-3 1-6 4-7Z"></path></svg><span class="v54-transfer-text"><b>Fløibanen 下站 → Festplassen</b> · 步行<small>步行至聖誕市集</small></span></div><article class="v54-card sight">
 <input aria-label="展開 Bergen Christmas Market｜Festplassen 詳細介紹" class="v54-expand" id="v62-expand-509" type="checkbox"/>
 <div class="v54-main">
 <img data-photo="bergen-christmas-market" alt="可選示意插畫" class="v54-thumb" data-photo-file="images/bergen-christmas-market.webp" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2218%22%20fill%3D%22%23E5ECE7%22/%3E%3Ccircle%20cx%3D%22133%22%20cy%3D%2247%22%20r%3D%2225%22%20fill%3D%22%23fff%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20128%2043%2085l29%2031%2035-45%2073%2065v44H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.42%22/%3E%3Cpath%20d%3D%22M0%20151%2054%20117l35%2023%2033-20%2058%2034v26H0z%22%20fill%3D%22%238AA698%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M38%2040v14M31%2047h14M69%2024v10M64%2029h10%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22/%3E%3C/svg%3E"/>
@@ -2145,4 +2154,75 @@ if ('serviceWorker' in navigator && location.protocol === 'https:') {
     navigator.serviceWorker.register('sw.js').catch(function (e) { console.warn('[旅帖] 離線功能未啟用', e); });
   });
 }
+</script><script>
+/* 行程：1) 旅行期間自動打開今天  2) 左右滑動切換前一天／下一天 */
+(function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.daybar .day-chip'));
+  if (!chips.length) return;
+  var total = chips.length;
+  var YEAR = 2026;
+
+  // 從每個 Day 按鈕上的「11/27」算出日期
+  var dates = chips.map(function (c, i) {
+    var t = (c.querySelector('span') || {}).textContent || '';
+    var m = t.match(/(\d{1,2})\/(\d{1,2})/);
+    if (!m) return null;
+    var mon = +m[1], day = +m[2];
+    return YEAR + '-' + mon + '-' + day;
+  });
+  var now = new Date();
+  var todayKey = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
+  var todayNo = dates.indexOf(todayKey) + 1;   // 0 = 不在旅行期間
+
+  function dayFromHash() {
+    var m = location.hash.match(/^#day(\d+)$/);
+    if (m) return +m[1];
+    if (location.hash === '#schedule') return 1;
+    return 0;                                    // 不在行程頁
+  }
+  function centerChip(n) {
+    var chip = chips[n - 1], bar = chip && chip.parentElement;
+    if (!bar) return;
+    var left = chip.offsetLeft - (bar.clientWidth - chip.offsetWidth) / 2;
+    try { bar.scrollTo({ left: left, behavior: 'smooth' }); } catch (e) { bar.scrollLeft = left; }
+  }
+  function goDay(n, dir) {
+    if (n < 1 || n > total) return;
+    location.replace('#day' + n);
+    var sec = document.getElementById('day' + n);
+    if (sec && dir) {
+      sec.classList.remove('v7-in-l', 'v7-in-r');
+      void sec.offsetWidth;
+      sec.classList.add(dir > 0 ? 'v7-in-l' : 'v7-in-r');
+    }
+    window.scrollTo(0, 0);
+    centerChip(n);
+  }
+
+  // 今天：標記按鈕，「行程」按鈕直接連到今天
+  if (todayNo) {
+    chips[todayNo - 1].classList.add('is-today');
+    document.querySelectorAll('a[href="#schedule"]').forEach(function (a) { a.setAttribute('href', '#day' + todayNo); });
+    if (!location.hash || location.hash === '#schedule') goDay(todayNo, 0);
+  }
+  window.addEventListener('hashchange', function () { var n = dayFromHash(); if (n) centerChip(n); });
+  if (dayFromHash()) setTimeout(function () { centerChip(dayFromHash()); }, 50);
+
+  // 左右滑動
+  var sx = 0, sy = 0, st = 0, ok = false;
+  document.addEventListener('touchstart', function (e) {
+    ok = false;
+    if (e.touches.length !== 1 || !dayFromHash()) return;
+    var t = e.target;
+    if (t.closest && t.closest('.daybar, input, textarea, select, .scroll, pre, table')) return;
+    sx = e.touches[0].clientX; sy = e.touches[0].clientY; st = Date.now(); ok = true;
+  }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (!ok) return; ok = false;
+    var p = e.changedTouches[0], dx = p.clientX - sx, dy = p.clientY - sy;
+    if (Date.now() - st > 700 || Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    var n = dayFromHash();
+    goDay(dx < 0 ? n + 1 : n - 1, dx < 0 ? 1 : -1);
+  }, { passive: true });
+})();
 </script></body></html>
