@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>挑選景點照片｜北歐旅帖</title>
+<style>
+:root{--acc:#7FAF9A;--acc-d:#4a7c6a;--t1:#1f2937;--t2:#6b7280;--bdr:#e5e7eb;--bg2:#f0f4f2}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif;color:var(--t1);background:#fff;padding-bottom:120px}
+header{padding:20px 16px 8px;max-width:760px;margin:auto}
+h1{font-size:24px;margin:0 0 6px}
+header p{margin:0;color:var(--t2);font-size:14px}
+main{max-width:760px;margin:auto;padding:0 12px}
+section{border-top:1px solid var(--bdr);padding:16px 4px}
+h2{font-size:17px;margin:0 0 10px;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+h2 small{font-size:12px;color:var(--acc-d);font-weight:500;white-space:nowrap}
+.row{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.opt{position:relative;border:2px solid var(--bdr);border-radius:12px;overflow:hidden;background:var(--bg2);cursor:pointer;padding:0;text-align:left;font:inherit;color:inherit}
+.opt img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#e9eeeb}
+.opt span{display:block;font-size:13px;padding:6px 8px;color:var(--t2)}
+.opt.on{border-color:var(--acc-d);box-shadow:0 0 0 3px rgba(127,175,154,.35)}
+.opt.on::after{content:"✓";position:absolute;top:6px;right:6px;width:26px;height:26px;border-radius:50%;background:var(--acc-d);color:#fff;font-size:15px;display:grid;place-items:center}
+.opt.none{display:grid;place-items:center;aspect-ratio:auto;min-height:100%}
+.opt.none div{padding:24px 8px;text-align:center;color:var(--t2);font-size:14px}
+.opt.broken img{opacity:.25}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--bdr);padding:10px 12px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(0,0,0,.06)}
+.bar div{max-width:760px;margin:auto;display:flex;gap:10px;align-items:center}
+.bar p{flex:1;margin:0;font-size:13px;color:var(--t2)}
+button.main{min-height:44px;padding:0 18px;border:0;border-radius:22px;background:var(--acc-d);color:#fff;font:600 15px/1 inherit;font-family:inherit}
+#out{display:none;max-width:760px;margin:16px auto;padding:0 12px}
+#out textarea{width:100%;height:220px;font:13px/1.4 ui-monospace,Menlo,monospace;border:1px solid var(--bdr);border-radius:10px;padding:10px}
+#out ol{padding-left:20px;font-size:14px;color:var(--t2)}
+</style>
+</head>
+<body>
+<header>
+  <h1>挑選景點照片</h1>
+  <p>每個景點點一張喜歡的照片。不選就維持現在的照片。照片來自 Wikimedia Commons，載入可能要幾秒。</p>
+</header>
+<main id="list"></main>
+<div id="out">
+  <h2>設定檔已產生</h2>
+  <ol>
+    <li>按「複製」</li>
+    <li>到 GitHub 打開 <b>PHOTO_OVERRIDES.json</b> → 鉛筆圖示 → 全部刪掉、貼上 → Commit</li>
+    <li>到 Actions 執行一次 Find Creative Commons travel photos</li>
+  </ol>
+  <textarea id="json" readonly></textarea>
+  <p><button class="main" id="copy">複製</button> <span id="copied"></span></p>
+</div>
+<div class="bar"><div><p id="count">尚未選擇</p><button class="main" id="make">產生設定檔</button></div></div>
+
+<script>
+{
+const C = [
+ ["vienna-stephansdom","史蒂芬教堂",[["Wien - Stephansdom (1).JPG","西側正面"],["A-Wien-Stephansdom-Ansicht.JPG","南側"],["0181-0183a - Wien - Stephansdom.jpg","廣場全景"]]],
+ ["vienna-stephansplatz-christmas","Stephansplatz 聖誕市集",[["20231222.Weihnachtsmarkt beim Stephansplatz.-006.jpg","2023 聖誕市集"],["Stephansplatz Wien 4.jpg","廣場與教堂"],["Vienna Stephansplatz (49579151733).jpg","廣場白天"]]],
+ ["vienna-am-hof-christmas","Am Hof 聖誕市集",[["Wien, Am Hof, Weihnachtsmarkt.jpg","2018 市集"],["Karl Wenzel Zajicek Christkindlmarkt Am Hof.jpg","懷舊水彩畫"]]],
+ ["vienna-freyung-christmas","Freyung 聖誕市集",[["Wien, Freyung, Altwiener Christkindlmarkt 2019.jpg","2019 市集"],["Wien, Altwiener Christkindlmarkt 2018 (3).jpg","2018 傍晚"],["Altwiener Christkindlmarkt 2011.jpg","2011 市集"]]],
+ ["vienna-karlskirche","卡爾教堂",[["Karlskirche Wien Nacht.jpg","夜景倒影"],["Weihnachtsmarkt vor der Karlskirche in Wien 5.JPG","教堂前聖誕市集"],["Karlskirche im Dezember.jpg","12 月"]]],
+ ["vienna-rathausplatz-christmas","市政廳聖誕市集",[["Wien - Christkindlmarkt, Rathausplatz.JPG","2017 市集"],["Wiener Christkindlmarkt und Christbaum.jpg","夜晚聖誕樹"],["Rathaus Wien Christkindlmarkt Panorama.jpg","全景"]]],
+ ["vienna-schonbrunn-christmas","美泉宮聖誕市集",[["Markt und Schloß Schönbrunn Foto G. Fally.JPG","市集與宮殿"],["Schoenbrunn Christmas market 2018.jpg","2018 夜晚"],["Schloss Schönbrunn - Adventmarkt 2.jpg","降臨期市集"]]],
+ ["helsinki-senate-square","參議院廣場",[["Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg","2026 春"],["Senate Square in Helsinki.jpg","廣場全景"],["Senate Square Helsinki.JPG","夏天"]]],
+ ["helsinki-cathedral","白教堂",[["Helsinki Cathedral and Alexander II Monument in Winter (2022).jpg","冬天"],["Helsinki Cathedral.jpg","從廣場看"],["Helsinki's Cathedral.jpg","正面"]]],
+ ["helsinki-uspenski-cathedral","紅教堂",[["Uspenski Cathedral in Winter, Helsinki (2023).jpg","冬天"],["Helsinki Uspenski Cathedral 01.jpg","正面"],["Uspenski Cathedral Helsinki 2012.jpg","早春"]]],
+ ["helsinki-esplanadi","Esplanadi 公園",[["Esplanade-helsinki-hiver.JPG","冬天"],["Esplanade park winter - Marit Henriksson.jpg","雪景"],["Esplanadi is an park in Helsinki, Finland. 06.jpg","夏天"]]],
+ ["viking-line-ferry","赫爾辛基–斯德哥爾摩渡輪",[["Viking line's MS Gabriella in Stockholm.jpg","Gabriella 號"],["Departure from Helsinki - Gabriella - Viking Line - From Helsinki to Stockholm - 53131420518.jpg","從赫爾辛基出發"],["Viking XPRS 2008-04-29.jpg","Viking XPRS"]]],
+ ["rovaniemi-santa-claus-village","聖誕老人村",[["Santa Claus Village (5306867729).jpg","冬夜"],["Santa Claus Village.jpg","2023 冬"],["Rovaniemi pajakyla 2.jpg","12 月"]]],
+ ["levi-village","Levi 小鎮",[["Gondola in Levi, Finland.jpg","纜車與小鎮"],["Levi hiihtokeskus 2003.jpg","滑雪場"],["View from Levi, Sirkka, Finland.jpg","山上遠眺"]]],
+ ["stockholm-city-hall","斯德哥爾摩市政廳",[["Stockholm-City-Hall-Winter-2010.jpg","冬天"],["Stockholms Stadshuset City Hall Stockholm 2016 01.jpg","1 月傍晚"],["Stockholm City Hall February 2014 01.jpg","夜景"]]],
+ ["stockholm-stortorget-christmas","Stortorget 聖誕市集",[["Julmarknad på Stortorget, Gamla stan, Stockholm, 2017m.jpg","2017 市集"],["Julmarknad på Stortorget, Gamla stan, Stockholm, 2017b.jpg","攤位"],["Gamla stans Julmarknad 2009c.jpg","夜晚"]]],
+ ["stockholm-vasa-museum","瓦薩博物館",[["Stockholm Muzeum Vasa 02.jpg","瓦薩號"],["Vasa stockholm.JPG","船身"],["Wasa Museum - Stockholm - Exterior.jpg","博物館外觀"]]],
+ ["stockholm-skansen","Skansen 聖誕市集",[["Skansens julmarknad 2013.jpg","聖誕市集"],["Skansen (39566474324).jpg","冬天"],["Skansens Bergbanan winter 2023 (1).jpg","冬天纜車"]]],
+ ["stockholm-clarion-amaranten","Clarion Hotel Amaranten",[["Clarion Hotel Amaranten, 20221125.jpg","2022 外觀"],["Clarion-hotel-amaranten-stockholm.jpg","外觀"],["Amaranten Stockholm.jpg","外觀"]]],
+ ["oslo-opera-house","奧斯陸歌劇院",[["Oslo Opera House - 49565247818 Norway February 2020 Bernt Rostad CC BY 2.0.jpg","冬天清晨"],["Operahuset i Oslo en vinterdag.jpg","冬日"],["Oslo in the winter - Opera (night).jpg","冬夜"]]],
+ ["flam-station","Flåm 車站",[["Flåmsbana train at Flåm Station.jpg","火車進站"],[".00 1230 Flåmsbana und Bahnhof von Flåm, Norwegen.jpg","車站與火車頭"]]],
+ ["gudvangen","Gudvangen",[["Nærøyfjorden mot Gudvangen.jpg","峽灣"],["Nærøyfjord (Kaupanger - Gudvangen) - panoramio.jpg","峽灣航線"],["Naerofjord (i.e., Nærøyfjord) from Gudvangen, Sognefjord, Norway-LCCN2001700720.jpg","彩色老照片"]]],
+ ["voss","Voss",[["Vossavangen.jpg","湖邊市區"],["Voss Church (Voss kirke kyrkje, Vangskyrkja), medieval stone church 1277, Vossevangen, Norway, snow, etc. DSC00492.jpg","雪中教堂"]]],
+ ["bergen-bryggen","Bryggen 碼頭",[["Bryggen i Bergen - vinter 2025.jpg","2025 冬天"],["Bryggen the German Wharf in Bergen.jpg","12 月夜景"],["Bergen.Bryggen.1.jpg","白天"]]],
+ ["bergen-floibanen","Fløibanen 纜車",[["Floibanen Winter Bergen Norway 2009 1.JPG","冬天"],["Fløibanen as seen from Fløyen.jpg","從山上看"],["Fløybanen - Funicular.JPG","纜車車廂"]]]
+];
+const thumb = f => 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(f) + '?width=400';
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pick = {};            // slug -> filename | "NONE" | undefined (keep current)
+let current = {}, existing = {};
+
+function render() {
+  document.getElementById('list').innerHTML = C.map(([slug, name, opts]) => {
+    const cur = current[slug];
+    const chosen = pick[slug];
+    const curOpt = cur ? `<button class="opt ${chosen === undefined ? 'on' : ''}" data-s="${slug}" data-f=""><img loading="lazy" referrerpolicy="no-referrer" src="${esc(cur)}" alt=""><span>維持現在</span></button>` : '';
+    return `<section><h2>${esc(name)}<small>${chosen === undefined ? '' : chosen === 'NONE' ? '改用插畫' : '已選新照片'}</small></h2><div class="row">${curOpt}${
+      opts.map(([f, label]) => `<button class="opt ${chosen === f ? 'on' : ''}" data-s="${slug}" data-f="${esc(f)}"><img loading="lazy" referrerpolicy="no-referrer" src="${thumb(f)}" alt=""><span>${esc(label)}</span></button>`).join('')
+    }<button class="opt none ${chosen === 'NONE' ? 'on' : ''}" data-s="${slug}" data-f="NONE"><div>不放照片<br>用原本插畫</div></button></div></section>`;
+  }).join('');
+  document.querySelectorAll('.opt img').forEach(img => img.addEventListener('error', () => img.parentElement.classList.add('broken')));
+  const n = Object.keys(pick).length;
+  document.getElementById('count').textContent = n ? `已改 ${n} 個景點` : '尚未選擇';
+}
+
+document.getElementById('list').addEventListener('click', e => {
+  const b = e.target.closest('.opt'); if (!b) return;
+  const s = b.dataset.s, f = b.dataset.f;
+  if (!f) delete pick[s]; else pick[s] = f;
+  try { localStorage.setItem('nordic-pick', JSON.stringify(pick)); } catch (err) {}
+  render();
+});
+
+document.getElementById('make').addEventListener('click', () => {
+  const merged = Object.assign({}, existing, pick);
+  document.getElementById('json').value = JSON.stringify({ photos: merged }, null, 2);
+  const out = document.getElementById('out'); out.style.display = 'block';
+  out.scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('copy').addEventListener('click', () => {
+  const t = document.getElementById('json');
+  const done = ok => document.getElementById('copied').textContent = ok ? '已複製 ✓' : '請長按文字框手動複製';
+  if (navigator.clipboard) navigator.clipboard.writeText(t.value).then(() => done(true), () => { t.select(); done(false); });
+  else { t.select(); done(false); }
+});
+
+try { Object.assign(pick, JSON.parse(localStorage.getItem('nordic-pick') || '{}')); } catch (err) {}
+Promise.all([
+  fetch('PHOTO_CREDITS.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : []).catch(() => []),
+  fetch('PHOTO_OVERRIDES.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+]).then(([credits, ov]) => {
+  (credits || []).forEach(r => { if (r && r.url) current[r.slug] = r.url; });
+  existing = (ov && ov.photos) || ov || {};
+  render();
+});
+render();
+}
+</script>
+</body>
+</html>
