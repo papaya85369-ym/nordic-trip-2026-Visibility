@@ -333,8 +333,15 @@
   {
     "slug": "bergen-christmas-market",
     "query": "Bergen Christmas market Festplassen",
-    "status": "未找到／保留原插畫",
-    "error": "沒有通過授權及關聯性篩選的照片"
+    "status": "已取得連結／待人工審核",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Festplassen_i_Bergen.jpg/960px-Festplassen_i_Bergen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_title": "File:Festplassen i Bergen.jpg",
+    "author": "Cavernia",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Festplassen_i_Bergen.jpg",
+    "override": true,
+    "requested_file": "Festplassen i Bergen.jpg"
   },
   {
     "slug": "vienna-schonbrunn-christmas",
@@ -360,7 +367,8 @@
     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Taiwan_Taoyuan_International_Airport_-_Terminal_1.jpg",
     "override": false,
-    "requested_file": ""
+    "requested_file": "",
+    "override_error": "ValueError: Wikimedia Commons 找不到此指定檔案：File:Taoyuan Airport T2 Concourse D 18-07-2026.jpg\" title=\"Plum blossom TW, CC BY 4.0, via Wikimedia Commons\"><img width=\"600\" height=\"450\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Taoyuan Airport T2 Concourse D 18-07-2026.jpg/960px-Taoyuan"
   },
   {
     "slug": "vienna-airport",
@@ -456,8 +464,15 @@
   {
     "slug": "vr-night-train",
     "query": "VR Santa Claus Express sleeping car",
-    "status": "未找到／保留原插畫",
-    "error": "沒有通過授權及關聯性篩選的照片"
+    "status": "已取得連結／待人工審核",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Finnish_Edm_sleeping_car.JPG/960px-Finnish_Edm_sleeping_car.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_title": "File:Finnish Edm sleeping car.JPG",
+    "author": "junafani",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Finnish_Edm_sleeping_car.JPG",
+    "override": true,
+    "requested_file": "Finnish Edm sleeping car.JPG"
   },
   {
     "slug": "rovaniemi-railway-station",
@@ -538,14 +553,28 @@
   {
     "slug": "lapland-reindeer-sledge",
     "query": "reindeer sledge Lapland Finland",
-    "status": "未找到／保留原插畫",
-    "error": "沒有通過授權及關聯性篩選的照片"
+    "status": "已取得連結／待人工審核",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Reindeer_Ride.jpg/960px-Reindeer_Ride.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_title": "File:Reindeer Ride.jpg",
+    "author": "Timo Newton-Syms",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Reindeer_Ride.jpg",
+    "override": true,
+    "requested_file": "Reindeer Ride.jpg"
   },
   {
     "slug": "lapland-husky-safari",
     "query": "husky safari sled Lapland",
-    "status": "未找到／保留原插畫",
-    "error": "沒有通過授權及關聯性篩選的照片"
+    "status": "已取得連結／待人工審核",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Wa_husky4.jpg/960px-Wa_husky4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_title": "File:Wa husky4.jpg",
+    "author": "Wolfgang Hägele",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wa_husky4.jpg",
+    "override": true,
+    "requested_file": "Wa husky4.jpg"
   },
   {
     "slug": "levi-reindeer-manor",
@@ -744,8 +773,15 @@
   {
     "slug": "flam-marina",
     "query": "Flåm Marina",
-    "status": "未找到／保留原插畫",
-    "error": "沒有通過授權及關聯性篩選的照片"
+    "status": "已取得連結／待人工審核",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fl%C3%A5m_-_Aurlandsfjord.jpg/960px-Fl%C3%A5m_-_Aurlandsfjord.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_title": "File:Flåm - Aurlandsfjord.jpg",
+    "author": "Фалкон",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fl%C3%A5m_-_Aurlandsfjord.jpg",
+    "override": true,
+    "requested_file": "Flåm - Aurlandsfjord.jpg"
   },
   {
     "slug": "flam-village",
@@ -776,8 +812,15 @@
   {
     "slug": "flam-pier",
     "query": "Flåm harbour pier fjord",
-    "status": "未找到／保留原插畫",
-    "error": "沒有通過授權及關聯性篩選的照片"
+    "status": "已取得連結／待人工審核",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Fl%C3%A5m_harbour.jpg/960px-Fl%C3%A5m_harbour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_title": "File:Flåm harbour.jpg",
+    "author": "Vanno at nl.wikipedia",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Fl%C3%A5m_harbour.jpg",
+    "override": true,
+    "requested_file": "Flåm harbour.jpg"
   },
   {
     "slug": "gudvangen",
@@ -879,8 +922,15 @@
   {
     "slug": "oslo-city-centre",
     "query": "Oslo city centre Stortorvet",
-    "status": "未找到／保留原插畫",
-    "error": "沒有通過授權及關聯性篩選的照片"
+    "status": "已取得連結／待人工審核",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Karl_Johans_gate%2C_vinter_2025.jpg/960px-Karl_Johans_gate%2C_vinter_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_title": "File:Karl Johans gate, vinter 2025.jpg",
+    "author": "Ssu",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karl_Johans_gate,_vinter_2025.jpg",
+    "override": true,
+    "requested_file": "Karl Johans gate, vinter 2025.jpg"
   },
   {
     "slug": "oslo-airport",
